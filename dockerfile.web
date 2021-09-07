@@ -5,3 +5,4 @@ RUN pip3 install -r /var/www/html/requirements.txt
 COPY ./ports.conf /etc/apache2/port.conf
 COPY ./ports.conf /etc/apache2/sites-enabled/000-default.conf
 COPY . /var/www/html/
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
